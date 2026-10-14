@@ -1,0 +1,217 @@
+{
+  "public_demo": true,
+  "contains_real_data": false,
+  "generated_at": "2026-07-29T02:04:40.987523+00:00",
+  "system_status": "research_only",
+  "scenarios": [
+    {
+      "scenario": "research_candidate",
+      "task": {
+        "task_id": "DEMO-RESEARCH-001",
+        "plane": "research",
+        "action_type": "validation",
+        "priority": "T1",
+        "description": "validate a synthetic research candidate",
+        "auto_allowed": true
+      },
+      "route": {
+        "decision": "allow",
+        "task_id": "DEMO-RESEARCH-001",
+        "plane": "research",
+        "reasons": [
+          "task satisfies public-safe plane policy"
+        ]
+      },
+      "lifecycle": null,
+      "evidence": {
+        "evidence_class": "research_artifact",
+        "requested_claims": [
+          "research_direction"
+        ],
+        "allowed": true,
+        "allowed_claims": [
+          "research_direction"
+        ],
+        "blocked_claims": [],
+        "reasons": [
+          "claims match evidence class"
+        ]
+      },
+      "promotion": null,
+      "release": {
+        "decision": "research_only",
+        "execution_authority": false,
+        "next_allowed_action": "human_review"
+      }
+    },
+    {
+      "scenario": "dry_run_lifecycle",
+      "task": {
+        "task_id": "DEMO-DRYRUN-001",
+        "plane": "execution",
+        "action_type": "dry_run",
+        "priority": "T1",
+        "description": "reconcile a synthetic dry-run lifecycle",
+        "auto_allowed": true
+      },
+      "route": {
+        "decision": "allow",
+        "task_id": "DEMO-DRYRUN-001",
+        "plane": "execution",
+        "reasons": [
+          "task satisfies public-safe plane policy"
+        ]
+      },
+      "lifecycle": {
+        "intent": {
+          "intent_id": "DEMO-DRYRUN-001-INTENT",
+          "side": "observe",
+          "target_fraction": 0.0,
+          "reason": "public synthetic demonstration",
+          "created_at": "2026-07-29T02:04:40.987441+00:00"
+        },
+        "events": [
+          {
+            "intent_id": "DEMO-DRYRUN-001-INTENT",
+            "event_type": "intent_created",
+            "message": "dry-run intent created",
+            "created_at": "2026-07-29T02:04:40.987457+00:00"
+          },
+          {
+            "intent_id": "DEMO-DRYRUN-001-INTENT",
+            "event_type": "risk_checked",
+            "message": "risk policy passed for simulation",
+            "created_at": "2026-07-29T02:04:40.987461+00:00"
+          },
+          {
+            "intent_id": "DEMO-DRYRUN-001-INTENT",
+            "event_type": "simulated_fill",
+            "message": "simulated fill recorded",
+            "created_at": "2026-07-29T02:04:40.987463+00:00"
+          },
+          {
+            "intent_id": "DEMO-DRYRUN-001-INTENT",
+            "event_type": "reconciled",
+            "message": "dry-run lifecycle reconciled",
+            "created_at": "2026-07-29T02:04:40.987465+00:00"
+          }
+        ],
+        "reconciliation": {
+          "intent_id": "DEMO-DRYRUN-001-INTENT",
+          "status": "matched",
+          "event_count": 4,
+          "real_order_submitted": false,
+          "real_fill_recorded": false
+        }
+      },
+      "evidence": {
+        "evidence_class": "dry_run",
+        "requested_claims": [
+          "lifecycle_design",
+          "reconciliation_design"
+        ],
+        "allowed": true,
+        "allowed_claims": [
+          "lifecycle_design",
+          "reconciliation_design"
+        ],
+        "blocked_claims": [],
+        "reasons": [
+          "claims match evidence class"
+        ]
+      },
+      "promotion": null,
+      "release": {
+        "decision": "research_only",
+        "execution_authority": false,
+        "next_allowed_action": "human_review"
+      }
+    },
+    {
+      "scenario": "promotion_request",
+      "task": {
+        "task_id": "DEMO-PROMOTION-001",
+        "plane": "governance",
+        "action_type": "promotion",
+        "priority": "T1",
+        "description": "evaluate a synthetic candidate promotion package",
+        "auto_allowed": true
+      },
+      "route": {
+        "decision": "approval_required",
+        "task_id": "DEMO-PROMOTION-001",
+        "plane": "governance",
+        "reasons": [
+          "promotion evaluation requires explicit review"
+        ]
+      },
+      "lifecycle": null,
+      "evidence": null,
+      "promotion": {
+        "request": {
+          "candidate_id": "CANDIDATE-DEMO-001",
+          "current_status": "research_only",
+          "target_status": "candidate",
+          "evidence_classes": [
+            "governance_audit",
+            "research_artifact"
+          ],
+          "passed_checks": [
+            "data_asof",
+            "objective_label",
+            "stability",
+            "stress_test"
+          ],
+          "human_approved": false
+        },
+        "decision": {
+          "allowed": false,
+          "blockers": [
+            "public_promotion_ceiling"
+          ],
+          "missing_evidence": [],
+          "missing_checks": []
+        }
+      },
+      "release": {
+        "decision": "blocked",
+        "execution_authority": false,
+        "next_allowed_action": "none"
+      }
+    },
+    {
+      "scenario": "live_request",
+      "task": {
+        "task_id": "DEMO-LIVE-001",
+        "plane": "execution",
+        "action_type": "dry_run",
+        "priority": "T1",
+        "description": "enable live trading after the public demo",
+        "auto_allowed": true
+      },
+      "route": {
+        "decision": "refuse",
+        "task_id": "DEMO-LIVE-001",
+        "plane": "execution",
+        "reasons": [
+          "forbidden boundary matched: live trading"
+        ]
+      },
+      "lifecycle": null,
+      "evidence": null,
+      "promotion": null,
+      "release": {
+        "decision": "blocked",
+        "execution_authority": false,
+        "next_allowed_action": "none"
+      }
+    }
+  ],
+  "summary": {
+    "scenario_count": 4,
+    "research_only_count": 2,
+    "blocked_count": 2,
+    "real_orders_submitted": 0,
+    "real_fills_recorded": 0
+  }
+}

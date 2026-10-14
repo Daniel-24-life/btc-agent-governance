@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+  <title id="title">Governed public run flow</title>
+  <desc id="desc">A synthetic task moves through policy routing, a bounded plane, artifact creation, evidence classification, and a release decision. Unsupported requests are blocked.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#0b1c2e"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#153c60"/>
+      <stop offset="1" stop-color="#0e263f"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5a3e16"/>
+      <stop offset="1" stop-color="#261d12"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#4f86ad" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="760" rx="28" fill="url(#bg)"/>
+  <rect width="1600" height="760" rx="28" fill="url(#grid)"/>
+
+  <text x="86" y="88" fill="#f3f8fc" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700">ONE GOVERNED RUN</text>
+  <text x="86" y="128" fill="#8fb8d5" font-family="Segoe UI, Arial, sans-serif" font-size="21">Synthetic input · real public code path · explicit claim boundary</text>
+  <rect x="1260" y="65" width="252" height="54" rx="27" fill="#102d47" stroke="#3c93c7"/>
+  <circle cx="1294" cy="92" r="8" fill="#58d3ff"/>
+  <text x="1315" y="100" fill="#d9f3ff" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">RESEARCH ONLY</text>
+
+  <path d="M246 330H326M526 330H606M806 330H886M1086 330H1166M1366 330H1425"
+        fill="none" stroke="#55c9ff" stroke-width="5" stroke-linecap="round"/>
+  <path d="M306 318l20 12-20 12M586 318l20 12-20 12M866 318l20 12-20 12M1146 318l20 12-20 12M1405 318l20 12-20 12"
+        fill="none" stroke="#55c9ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="66" y="216" width="180" height="228" rx="22" fill="url(#blue)" stroke="#3188b9" stroke-width="2"/>
+    <circle cx="156" cy="274" r="28" fill="#0b2034" stroke="#56cfff" stroke-width="3"/>
+    <path d="M145 274h22M156 263v22" stroke="#56cfff" stroke-width="4" stroke-linecap="round"/>
+    <text x="156" y="340" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="650">TASK</text>
+    <text x="156" y="373" text-anchor="middle" fill="#9ec4dc" font-family="Segoe UI, Arial, sans-serif" font-size="17">intent + scope</text>
+    <text x="156" y="400" text-anchor="middle" fill="#9ec4dc" font-family="Segoe UI, Arial, sans-serif" font-size="17">priority + plane</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="326" y="216" width="200" height="228" rx="22" fill="url(#amber)" stroke="#c58a2f" stroke-width="2"/>
+    <path d="M426 245l32 13v27c0 28-17 46-32 53-15-7-32-25-32-53v-27z" fill="#302414" stroke="#ffbf52" stroke-width="3"/>
+    <path d="M411 286l11 11 21-25" fill="none" stroke="#ffd27c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="426" y="360" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="650">POLICY</text>
+    <text x="426" y="393" text-anchor="middle" fill="#d9b97f" font-family="Segoe UI, Arial, sans-serif" font-size="17">fail-closed route</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="606" y="216" width="200" height="228" rx="22" fill="url(#blue)" stroke="#3188b9" stroke-width="2"/>
+    <rect x="666" y="250" width="80" height="74" rx="14" fill="#0a2035" stroke="#56cfff" stroke-width="3"/>
+    <path d="M680 270h52M680 286h35M680 302h44" stroke="#79d9ff" stroke-width="4" stroke-linecap="round"/>
+    <text x="706" y="360" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="650">PLANE</text>
+    <text x="706" y="393" text-anchor="middle" fill="#9ec4dc" font-family="Segoe UI, Arial, sans-serif" font-size="17">bounded action</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="886" y="216" width="200" height="228" rx="22" fill="url(#blue)" stroke="#3188b9" stroke-width="2"/>
+    <path d="M944 264h84v66h-84z" fill="#0a2035" stroke="#56cfff" stroke-width="3"/>
+    <path d="M958 282h56M958 298h45M958 314h52" stroke="#79d9ff" stroke-width="4" stroke-linecap="round"/>
+    <text x="986" y="360" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="650">ARTIFACT</text>
+    <text x="986" y="393" text-anchor="middle" fill="#9ec4dc" font-family="Segoe UI, Arial, sans-serif" font-size="17">record + manifest</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1166" y="216" width="200" height="228" rx="22" fill="url(#amber)" stroke="#c58a2f" stroke-width="2"/>
+    <circle cx="1266" cy="288" r="40" fill="#302414" stroke="#ffbf52" stroke-width="3"/>
+    <path d="M1248 288l12 12 25-29" fill="none" stroke="#ffd27c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1266" y="360" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="650">EVIDENCE</text>
+    <text x="1266" y="393" text-anchor="middle" fill="#d9b97f" font-family="Segoe UI, Arial, sans-serif" font-size="17">classify claims</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1425" y="248" width="118" height="164" rx="22" fill="#102d47" stroke="#56cfff" stroke-width="2"/>
+    <circle cx="1484" cy="300" r="22" fill="#0b2034" stroke="#56cfff" stroke-width="3"/>
+    <path d="M1474 300l8 8 14-17" fill="none" stroke="#8fe4ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1484" y="354" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="650">RELEASE</text>
+    <text x="1484" y="382" text-anchor="middle" fill="#9ec4dc" font-family="Segoe UI, Arial, sans-serif" font-size="15">bounded</text>
+  </g>
+
+  <path d="M426 444v90h222" fill="none" stroke="#ff776f" stroke-width="4" stroke-linecap="round"/>
+  <path d="M628 522l20 12-20 12" fill="none" stroke="#ff776f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="648" y="492" width="286" height="84" rx="18" fill="#35191b" stroke="#c34f50" stroke-width="2"/>
+  <text x="791" y="528" text-anchor="middle" fill="#ffd7d5" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="650">UNSUPPORTED REQUEST</text>
+  <text x="791" y="557" text-anchor="middle" fill="#e7a7a4" font-family="Segoe UI, Arial, sans-serif" font-size="17">blocked before execution</text>
+
+  <rect x="86" y="635" width="1428" height="64" rx="18" fill="#091725" stroke="#284d68"/>
+  <circle cx="127" cy="667" r="9" fill="#58d3ff"/>
+  <text x="151" y="675" fill="#b8d8eb" font-family="Consolas, monospace" font-size="19">route decision</text>
+  <circle cx="365" cy="667" r="9" fill="#ffbf52"/>
+  <text x="389" y="675" fill="#b8d8eb" font-family="Consolas, monospace" font-size="19">evidence decision</text>
+  <circle cx="676" cy="667" r="9" fill="#ff776f"/>
+  <text x="700" y="675" fill="#b8d8eb" font-family="Consolas, monospace" font-size="19">blocked claim</text>
+  <text x="1469" y="675" text-anchor="end" fill="#6f9bb8" font-family="Consolas, monospace" font-size="18">execution_authority=false</text>
+</svg>
