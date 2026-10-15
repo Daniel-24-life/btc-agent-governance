@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="浏览 BTC Agent Governance 的四个合成治理场景；仅限研究与 dry-run，不进行模型交易。"
+    />
+    <title>治理记录查看器 · BTC Agent Governance</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#record">跳到当前记录</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="../README.md" aria-label="返回项目说明">
+          <span aria-hidden="true">BG</span>
+          <strong>治理记录</strong>
+        </a>
+        <nav aria-label="页面导航">
+          <a href="#scenarios">四个场景</a>
+          <a href="#raw-record">原始 JSON</a>
+          <a href="../README.md">项目说明</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="record" class="shell" tabindex="-1">
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">LOCAL · SYNTHETIC · READ ONLY</p>
+          <h1 id="page-title">本地治理记录查看器</h1>
+          <p class="lede">
+            检查任务如何经过路由、模拟生命周期、证据分类与发布门禁。这里没有真实数据、账户连接或下单能力。
+          </p>
+        </div>
+        <aside class="boundary" aria-labelledby="boundary-title">
+          <h2 id="boundary-title">公开边界</h2>
+          <p><strong>绝不模型交易。</strong> 仅展示仓库内合成记录。</p>
+          <dl id="boundary-values" class="boundary-values" aria-live="polite">
+            <div><dt>系统状态</dt><dd>正在读取…</dd></div>
+            <div><dt>真实订单</dt><dd>—</dd></div>
+            <div><dt>真实成交</dt><dd>—</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <div id="load-status" class="load-status" role="status" aria-live="polite">
+        正在从 <code>../sample.fake.json</code> 读取本地合成记录…
+      </div>
+
+      <section id="scenarios" class="workspace" aria-labelledby="scenarios-title" hidden>
+        <aside class="scenario-panel">
+          <div class="section-heading">
+            <p class="eyebrow">SCENARIOS</p>
+            <h2 id="scenarios-title">四个场景</h2>
+          </div>
+          <div id="scenario-list" class="scenario-list" aria-label="选择场景"></div>
+        </aside>
+
+        <article class="record-panel" aria-labelledby="scenario-title">
+          <header class="record-header">
+            <div>
+              <p id="scenario-kicker" class="eyebrow"></p>
+              <h2 id="scenario-title"></h2>
+              <p id="scenario-description" class="record-description"></p>
+            </div>
+            <div id="release-badge"></div>
+          </header>
+
+          <section aria-labelledby="route-title">
+            <div class="section-heading row-heading">
+              <div>
+                <p class="eyebrow">ROUTE</p>
+                <h3 id="route-title">路由决定</h3>
+              </div>
+              <span id="route-status" class="status-label"></span>
+            </div>
+            <ul id="route-reasons" class="reason-list"></ul>
+          </section>
+
+          <section aria-labelledby="stages-title">
+            <div class="section-heading">
+              <p class="eyebrow">GOVERNANCE PATH</p>
+              <h3 id="stages-title">治理阶段</h3>
+            </div>
+            <ol id="stage-list" class="stage-list"></ol>
+          </section>
+
+          <section aria-labelledby="evidence-title">
+            <div class="section-heading">
+              <p class="eyebrow">REASONS &amp; EVIDENCE</p>
+              <h3 id="evidence-title">原因与证据</h3>
+            </div>
+            <div id="evidence-content"></div>
+          </section>
+
+          <details id="raw-record" class="raw-record">
+            <summary>查看当前场景原始 JSON</summary>
+            <pre tabindex="0"><code id="raw-json"></code></pre>
+          </details>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <p>只读静态查看器 · 数据来源 <code>sample.fake.json</code> · 无外部网络依赖</p>
+      </div>
+    </footer>
+  </body>
+</html>

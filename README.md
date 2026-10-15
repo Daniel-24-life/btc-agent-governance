@@ -14,6 +14,10 @@
 
 ![任务与证据的治理流程](docs/assets/governed-run-flow.svg)
 
+![本地合成记录查看器截图](docs/assets/viewer-desktop.png)
+
+[界面验证](docs/UI_QA.md) · [手机截图](docs/assets/viewer-mobile.png)
+
 ## 先运行一次
 
 需要 Python 3.11+，从仓库根目录运行：
@@ -22,6 +26,16 @@
 python public_demo.py
 python public_demo.py --json
 ```
+
+### 本地静态记录查看器
+
+查看器默认打开 `dry_run_lifecycle`，可切换四个合成场景，核对路由、治理阶段、原因、证据和原始 JSON。请从仓库根目录启动本地服务器（直接双击 HTML 会被浏览器阻止读取 JSON）：
+
+```powershell
+python -m http.server 8000
+```
+
+然后访问 <http://localhost:8000/demo/>。页面只读取本仓库的 `sample.fake.json`，无外部网络依赖，不连接账户、不生成策略，也不进行模型交易。
 
 | 场景 | 路由 | 发布判断 |
 | --- | --- | --- |
@@ -36,7 +50,8 @@ python public_demo.py --json
 
 - [系统架构](docs/architecture.md)：研究、执行、治理和编排的职责。
 - [源码阅读路线](docs/SOURCE_READING_GUIDE.md)：从路由到 JSON 输出逐层阅读。
-- [验证说明](docs/VERIFICATION.md)：22 项测试覆盖的边界与复核方法。
+- [查看器 UI 审计](docs/UI_AUDIT.md)：实现前发现、源码证据和验证条件。
+- [验证说明](docs/VERIFICATION.md)：测试覆盖的边界与复核方法。
 - [合成输出](sample.fake.json)：完整四场景记录，时间戳也是样例。
 - [迁移记录](MIGRATION.md)：原公开来源及独立维护位置。
 
