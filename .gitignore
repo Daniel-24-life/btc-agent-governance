@@ -4,3 +4,21 @@ __pycache__/
 .venv/
 .env
 *.log
+
+# Local secrets and generated artifacts
+.env*
+*.pem
+*.key
+*.pfx
+*.p12
+Cookies
+cookies.json
+node_modules/
+.next/
+.astro/
+.runtime/
+.DS_Store
+Thumbs.db
+*.tmp
+dist/
+build/
