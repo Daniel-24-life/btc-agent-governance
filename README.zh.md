@@ -1,13 +1,14 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/cover-dark.svg" />
-  <img src="docs/assets/cover-light.svg" alt="btc-agent-governance" width="1280" />
+  <source media="(prefers-color-scheme: dark)" srcset="docs/cover-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="docs/cover-light.svg">
+  <img src="docs/cover-light.svg" alt="Project overview" width="1280">
 </picture>
 
 # BTC Agent 治理
 
-[完整作品目录](https://github.com/Daniel-24-life/AIfile)
+[完整作品目录](https://github.com/Daniel-24-life/portfolio)
 
-[English](README.en.md) · [完整作品目录](https://github.com/Daniel-24-life/AIfile)
+[English](README.md) · [完整作品目录](https://github.com/Daniel-24-life/portfolio)
 
 把研究任务、模拟执行、证据声明和状态晋级分开判断的可运行参考实现。
 公开版使用合成任务，演示一个请求如何通过路由、证据分类与发布门禁。

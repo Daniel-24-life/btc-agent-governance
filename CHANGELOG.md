@@ -1,4 +1,9 @@
-# 版本记录
+# Changelog
+
+## 2026-11-23
+
+- Added light and dark covers for bounded research routing and promotion checks.
+- Consolidated the default English overview and kept the Chinese entry.
 
 ## v1.1 — 2026-10-15
 

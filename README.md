@@ -1,8 +1,14 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/cover-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="docs/cover-light.svg">
+  <img src="docs/cover-light.svg" alt="Project overview" width="1280">
+</picture>
+
 # BTC Agent Governance
 
 An offline research reference for routing tasks, evaluating evidence, and checking promotion gates.
 
-[中文说明](README.zh.md) · [Portfolio](https://github.com/Daniel-24-life/AIfile)
+[中文说明](README.zh.md) · [Portfolio](https://github.com/Daniel-24-life/portfolio)
 
 ![Local record viewer for synthetic BTC research governance scenarios](docs/assets/viewer-desktop.png)
 
